@@ -1,17 +1,72 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+ <ion-item color="primary" >
+    <ion-icon name="clipboard-outline"></ion-icon>
+    <ion-label>Postulante</ion-label>
+  </ion-item>
   </ion-toolbar>
 </ion-header>
 
+<ion-header>
+  <ion-button (click)="toggleInfiniteScroll()" expand="block">
+    Cursos y certificados
+  </ion-button>
+</ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-content>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-list>
+
+      <ion-card >
+        <div text-center class="card-title">Certificado en Python</div>
+        <div class="card-subtitle">50 horas practicas</div>
+      </ion-card>
+    
+      <ion-card>
+        <img src="https://picsum.photos/id/1/200/100"/>
+        <div class="card-title">Certificado en Scrum</div>
+        <div class="card-subtitle">200 horas practicas</div>
+      </ion-card>
+      <ion-card>
+        <img src="https://picsum.photos/id/1/200/100"/>
+        <div class="card-title">Certificado en Javascript</div>
+        <div class="card-subtitle">100 horas practicas</div>
+      </ion-card>
+    
+      <ion-card>
+        <img src="https://picsum.photos/id/1/200/100"/>
+        <div class="card-title">Certificado en SQL</div>
+        <div class="card-subtitle">100 horas practicas</div>
+      </ion-card>
+      <ion-card>
+        <img src="https://picsum.photos/id/1/200/100"/>
+        <div class="card-title">Certificado en Css </div>
+        <div class="card-subtitle">50 horas practicas</div>
+      </ion-card>
+      <ion-card>
+        <img src="https://picsum.photos/id/1/200/100"/>
+        <div class="card-title">Certificado en Front-end</div>
+        <div class="card-subtitle">150 horas practicas</div>
+      </ion-card>
+      <ion-card>
+        <img src="https://picsum.photos/id/1/200/100"/>
+        <div class="card-title">Certificado en Power BI</div>
+        <div class="card-subtitle">100 horas practicas</div>
+      </ion-card>
+      <ion-card>
+        <img src="https://picsum.photos/id/1/200/100"/>
+        <div class="card-title">Certificado en Tableau</div>
+        <div class="card-subtitle">80 horas practicas</div>
+      </ion-card>
+      
+    
+  </ion-list>
+  
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-content>
 </ion-content>

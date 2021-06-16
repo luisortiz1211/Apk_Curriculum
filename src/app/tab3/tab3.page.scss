@@ -1,0 +1,13 @@
+/* Custom Skeleton Line Height and Margin */
+.custom-skeleton ion-skeleton-text {
+    line-height: 20px;
+    color: primary;
+  }
+  
+  .custom-skeleton ion-skeleton-text:last-child {
+    margin-bottom: 10px;
+  }
+  ion-icon {
+    font-size: 40px;
+    --ionicon-stroke-width: 16px;
+  }
